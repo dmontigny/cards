@@ -4,6 +4,7 @@
 import logging
 from os import path, remove
 import itertools as it
+from decors import timer
 
 
 class ClassCards(object):
@@ -45,6 +46,7 @@ class ClassCards(object):
         iters = [iter(self.cards)] * handsize
         return tuple(zip(*(tuple(it.islice(itr, numhands)) for itr in iters)))
 
+    # @timer
     def war(self):
         from random import randrange
         self.logger.debug('Time for War!!')
