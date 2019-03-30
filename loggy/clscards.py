@@ -71,7 +71,7 @@ class ClassCards(object):
             else:
                 tie += 1
                 self.logger.debug('Tie round, no winner')
-        self.logger.info('Scores: P1 = {}, P2 = {}, Ties = {}'.format(p1, p2, tie))
+        self.logger.info(f"Scores: P1 = {p1}, P2 = {p2}, Ties = {tie}")
         if p1 > p2:
             self.logger.debug('P1 wins game!')
             return 'p1'
